@@ -36,8 +36,10 @@ declare module '$env/static/private' {
 	export const CONFIG_SITE: string;
 	export const DISPLAY: string;
 	export const DriverData: string;
-	export const EFC_6496: string;
+	export const EFC_8204: string;
 	export const EXEPATH: string;
+	export const FPS_BROWSER_APP_PROFILE_STRING: string;
+	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const GOPATH: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
@@ -120,9 +122,7 @@ declare module '$env/static/private' {
 	export const SESSIONNAME: string;
 	export const SHELL: string;
 	export const SHLVL: string;
-	export const SSH_AGENT_PID: string;
 	export const SSH_ASKPASS: string;
-	export const SSH_AUTH_SOCK: string;
 	export const SYSTEMDRIVE: string;
 	export const SYSTEMROOT: string;
 	export const TEMP: string;
@@ -177,8 +177,10 @@ declare module '$env/dynamic/private' {
 		CONFIG_SITE: string;
 		DISPLAY: string;
 		DriverData: string;
-		EFC_6496: string;
+		EFC_8204: string;
 		EXEPATH: string;
+		FPS_BROWSER_APP_PROFILE_STRING: string;
+		FPS_BROWSER_USER_PROFILE_STRING: string;
 		GOPATH: string;
 		HOME: string;
 		HOMEDRIVE: string;
@@ -261,9 +263,7 @@ declare module '$env/dynamic/private' {
 		SESSIONNAME: string;
 		SHELL: string;
 		SHLVL: string;
-		SSH_AGENT_PID: string;
 		SSH_ASKPASS: string;
-		SSH_AUTH_SOCK: string;
 		SYSTEMDRIVE: string;
 		SYSTEMROOT: string;
 		TEMP: string;

@@ -1,8 +1,9 @@
 <script>
     import { onMount } from "svelte";
-    // import {ref_files} from "$lib/stores";
+    import {ref_files} from "$lib/stores";
     import Dropzone from "svelte-file-dropzone/Dropzone.svelte";
     import Icon from "$lib/icon.svelte";
+    import {goto} from "$app/navigation";
 
     let sourceFiles = [];
     let targetFiles = [];
@@ -32,19 +33,26 @@
     };
 
     const removeSourceFile = (index) => {
-        console.log("remove", index);
+        sourceFiles = sourceFiles.filter((_, i) => i !== index);
+    };
+
+    const next_page = () => {
+        ref_files.set(sourceFiles);
+        // navigate to field selection page
+        goto("/field-select");
     };
 
     onMount(() => {
-        //
+        sourceFiles = $ref_files;
     });
 </script>
 
 <div>
     <h1>CSV Stuff</h1>
+    <button on:click={() => next_page()}>Next</button>
     <h4>Source Files</h4>
     <!-- <p>Foo <Icon name="x-circle" color="#eee" /></p> -->
-    <Dropzone on:drop={handleDrop} containerStyles={sourceStyleText} />
+    <Dropzone on:drop={handleDrop} containerStyles={sourceStyleText} accept="" />
     <div class="files">
         {#each sourceFiles as file, fileIndex}
             <!-- TODO make component -->
@@ -59,10 +67,10 @@
     </div>
 
     <h4>Target Files</h4>
-    <Dropzone on:drop={handleDrop2} containerStyles={targetStyleText} />
-    {#each targetFiles as file}
+    <Dropzone on:drop={handleDrop2} containerStyles={targetStyleText} accept="" />
+    <!-- {#each targetFiles as file}
         <p>{file.name}</p>
-    {/each}
+    {/each} -->
 </div>
 
 <style>
