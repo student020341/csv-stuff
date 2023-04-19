@@ -36,10 +36,8 @@ declare module '$env/static/private' {
 	export const CONFIG_SITE: string;
 	export const DISPLAY: string;
 	export const DriverData: string;
-	export const EFC_5200: string;
+	export const EFC_7824: string;
 	export const EXEPATH: string;
-	export const FPS_BROWSER_APP_PROFILE_STRING: string;
-	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const GOPATH: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
@@ -179,10 +177,8 @@ declare module '$env/dynamic/private' {
 		CONFIG_SITE: string;
 		DISPLAY: string;
 		DriverData: string;
-		EFC_5200: string;
+		EFC_7824: string;
 		EXEPATH: string;
-		FPS_BROWSER_APP_PROFILE_STRING: string;
-		FPS_BROWSER_USER_PROFILE_STRING: string;
 		GOPATH: string;
 		HOME: string;
 		HOMEDRIVE: string;
